@@ -72,7 +72,7 @@ export default function Home() {
             </svg>
           </div>
 
-          <div className="text-4xl text-center">
+          <div className="text-4xl text-center p-4">
             Everyone, everywhere, becoming one with God.
           </div>
 
