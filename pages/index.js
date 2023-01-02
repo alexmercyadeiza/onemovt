@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ONE - Everyone, everywhere.</title>
+        <title>ONE - Everyone, everywhere, becoming one with God.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="grid place-items-center h-screen">
