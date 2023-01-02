@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
+  const [fullname, setFullname] = useState("");
 
   const storeEmail = (e) => {
     e.preventDefault();
@@ -23,6 +24,7 @@ export default function Home() {
     var raw = JSON.stringify({
       fields: {
         Email: email,
+        Fullname: fullname
       },
     });
 
@@ -80,10 +82,20 @@ export default function Home() {
             <form onSubmit={storeEmail} className="md:w-1/2 w-3/4">
               <div className="space-y-2">
                 <input
+                  type="text"
+                  required
+                  onChange={(e) => setFullname(e.target.value)}
+                  className="mt-1 p-6 w-full text-xl block rounded-t-xl bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+                  placeholder="Fullname"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <input
                   type="email"
                   required
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 p-6 w-full text-xl block rounded-t-xl bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+                  className="mt-1 border-transparent p-6 w-full text-xl block bg-gray-100 focus:border-gray-500 focus:bg-white focus:ring-0"
                   placeholder="Email"
                 />
               </div>
